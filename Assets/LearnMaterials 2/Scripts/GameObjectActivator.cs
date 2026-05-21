@@ -7,8 +7,12 @@ using UnityEngine;
 [HelpURL("https://docs.google.com/document/d/1GP4_m0MzOF8L5t5pZxLChu3V_TFIq1czi1oJQ2X5kpU/edit?usp=sharing")]
 public class GameObjectActivator : MonoBehaviour
 {
-    private List<StateContainer> targets;
-    private bool debug;
+    [Header("Настройки модуля")]
+    [Tooltip("Список объектов и их целевых состояний")]
+    [SerializeField] private List<StateContainer> targets;
+
+    [Tooltip("Включить отображение Gizmos в редакторе")]
+    [SerializeField] private bool debug;
 
     private void Awake()
     {
